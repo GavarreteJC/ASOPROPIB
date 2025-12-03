@@ -1,0 +1,169 @@
+/* --- styles.css (VERSIÓN FINAL Y LIMPIA CON COLORES PERSONALIZADOS) --- */
+
+/* --- PALETA DE COLORES SIMPLE Y CLARA --- */
+:root {
+    --color-principal: #02672f;       /* Verde Oscuro (Títulos, Énfasis) */
+    --color-verdecito: #79D43B;      /* Verde Acento Claro */
+    --color-cafecito: #663200;       /* Marrón Cacao (Texto, Header, Footer) */
+    --color-naranjita: #f86300;       /* Naranja/Ocre (Botones principales) */
+    --color-fondo-claro: #FFFFFF;     /* Blanco */
+    --color-gris: #f7f7f7;           /* Gris muy claro para secciones */
+    --color-azul-cielo: #02ABEC;      /* Azul cielo (Header) */
+    --color-amarrillo: #E7C800;       /* Amarillo */
+}
+
+/* --- ESTILOS GENERALES Y TIPOGRAFÍA --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo-claro);
+    color: var(--color-cafecito); /* Usamos cafecito para el color de texto del body */
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--color-principal); /* Verde Oscuro */
+    text-align: center; 
+    margin-bottom: 0.5em;
+}
+
+/* --- NAVEGACIÓN (HEADER) --- */
+header {
+    background-color: var(--color-azul-cielo); /* AZUL CIELO */
+    padding: 15px 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 800; 
+    color: var(--color-fondo-claro); 
+    text-decoration: none;
+    letter-spacing: 1px; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px; 
+}
+
+nav ul li a {
+    color: var(--color-fondo-claro); 
+    text-decoration: none;
+    padding: 8px 15px; 
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px; 
+    font-size: 1.05em;
+}
+
+nav ul li a:hover {
+    background-color: var(--color-naranjita); /* Naranja/Ocre */
+    color: var(--color-cafecito); /* Texto Marrón Cacao al hacer hover */
+}
+
+
+/* --- SECCIÓN HERO --- */
+.hero {
+    background-color: var(--color-fondo-claro); /* Blanco */
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--color-gris); /* Usamos Gris */
+}
+.hero p {
+    color: #333; 
+    font-size: 1.2em;
+}
+
+/* --- BOTONES DE LLAMADA A LA ACCIÓN (CTA) --- */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-naranjita); /* Naranja/Ocre */
+    color: var(--color-fondo-claro);
+    padding: 15px 30px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.cta-button:hover {
+    background-color: var(--color-principal); /* Hover a Verde Oscuro */
+}
+
+/* --- Misión, Visión, Valores (MVV) - DISEÑO LINEAL Y SIMPLE --- */
+.mvv-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-top: 1px solid var(--color-gris);
+    border-bottom: 1px solid var(--color-gris);
+}
+
+.mvv-item {
+    flex: 1;
+    padding: 30px 20px;
+    text-align: center;
+    border-left: 1px solid var(--color-gris);
+}
+
+.mvv-item:first-child {
+    border-left: none; 
+}
+
+.mvv-item h3 {
+    color: var(--color-naranjita); /* Naranja/Ocre para títulos de MVV */
+    font-size: 1.3em;
+}
+
+/* --- SECCIONES DE CONTENIDO --- */
+.content-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- CORRECCIÓN PARA LA SECCIÓN DE DESTACADOS/NOTICIAS --- */
+.news-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px; 
+}
+
+.news-card {
+    flex: 1;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+    max-width: 350px; 
+}
+
+.news-card h3, .news-card p {
+    text-align: left;
+    margin: 0;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--color-cafecito); /* Marrón Cacao */
+    color: var(--color-fondo-claro);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
