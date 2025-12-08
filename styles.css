@@ -12,7 +12,9 @@
     --color-amarrillo: #E7C800;       /* Amarillo */
 }
 
-/* --- PALETA DE COLORES SIMPLE Y CLARA --- */
+
+
+
 /* --- ESTILOS GENERALES Y TIPOGRAFÍA --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,6 +23,7 @@ body {
     background-color: var(--color-fondo-claro);
     color: var(--color-cafecito); 
     line-height: 1.6;
+    font-size: 1.3em;
 }
 
 h1, h2, h3 {
@@ -58,29 +61,15 @@ nav {
 
 /* --- AJUSTES PARA EL LOGO DE IMAGEN --- */
 
-/* Esconde el texto antiguo del logo (si aún lo tienes como fallback) */
 .logo {
     display: none; 
 }
 
-/* Contenedor del logo para control de espacio */
 .logo-container {
-    height: 140px; /* Define la altura que quieres darle al logo */
+    height: 100px; /* Altura ajustada para el escritorio */
     display: flex;
     align-items: center;
-    padding-top: 5px; /* Pequeño ajuste si es necesario */
-}
-
-/* Estilos de la imagen del logo */
-.logo-img {
-    height: 100%; /* Ocupa el 100% de la altura de su contenedor */
-    width: auto;
-    max-width: 150px; /* Limita el ancho para que no sea muy grande en escritorio */
-    vertical-align: middle;
-}
-
-/* Ajuste si el texto del logo fuera necesario como respaldo */
-.logo-container {
+    padding-top: 5px; 
     font-size: 1.8em;
     font-weight: 800; 
     color: var(--color-fondo-claro); 
@@ -88,48 +77,42 @@ nav {
     letter-spacing: 1px; 
 }
 
-
+.logo-img {
+    height: 100%; 
+    width: auto;
+    max-width: 200px; 
+    vertical-align: middle;
+}
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 0; /* Eliminamos el gap para que los elementos se toquen */
+    gap: 0;
 }
 
 nav ul li a {
-    /* Hacemos que el enlace se comporte como un bloque para que ocupe todo el espacio */
     display: block; 
-    
     color: var(--color-azul-cielo); 
     text-decoration: none;
-    
-    /* Aumentamos el padding para darle más 'cuerpo' al área de click y al cuadrado */
     padding: 25px 30px; 
-    
     transition: background-color 0.3s, text-decoration 0.3s;
-    border-radius: 0; /* Eliminamos el border-radius para un look más cuadrado */
-    font-size: 1.50em;
+    border-radius: 0; 
+    font-size: 1.1em; /* Ajustado para que quepan */
     font-weight: 500;
 }
 
 nav ul li a:hover {
-    /* Estilo de subrayado para el hover */
     text-decoration: underline; 
-    text-decoration-thickness: 2px; /* Grosor del subrayado */
-    text-underline-offset: 4px; /* Separación del texto */
-    
-    /* Mantenemos un color de fondo sutil al pasar el cursor */
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
     background-color: var(--color-fondo-claro); 
-    
-    /* El color del texto no cambia para mantener la claridad */
     color: var(--color-azul-cielo); 
 }
 
 /* --- SECCIÓN HERO --- */
 .hero {
-    /* fondo imagen de cacao enorme */
     background-image: url('img/cacacofruta.jpeg');
     background-size: cover;
     background-position: center;
@@ -145,8 +128,8 @@ nav ul li a:hover {
     border-bottom: 2px solid var(--color-gris);
 }
 .hero p {
-    color: white; 
-    font-size: 1.2em;
+    color: var(--color-gris); 
+    font-size: 1.7em;
 }
 
 /* --- BOTONES DE LLAMADA A LA ACCIÓN (CTA) --- */
@@ -160,7 +143,7 @@ nav ul li a:hover {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
-    margin-left: 10px; /* Separación entre botones */
+    margin-left: 10px; 
     margin-top: 17px;
 }
 .cta-button:first-of-type {
@@ -301,7 +284,7 @@ footer {
     margin-top: 40px;
 }
 
-/* --- ESTILOS ESPECÍFICOS DEL FORMULARIO DE CONTACTO --- */
+/* --- ESTILOS ESPECÍFICOS DEL FORMULARIO DE CONTACTO (GENERAL) --- */
 
 .form-container {
     max-width: 600px;
@@ -322,7 +305,7 @@ footer {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: var(--color-principal); /* Utiliza el verde oscuro para las etiquetas */
+    color: var(--color-principal); 
 }
 
 .form-group input[type="text"],
@@ -339,7 +322,7 @@ footer {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: var(--color-naranjita); /* Resalta el foco con el color naranja */
+    border-color: var(--color-naranjita); 
     outline: none;
 }
 
@@ -350,7 +333,6 @@ footer {
 
 .submit-button {
     width: 100%;
-    /* Reutilizamos el estilo del botón principal */
     background-color: var(--color-principal);
     color: var(--color-fondo-claro);
     padding: 15px;
@@ -365,9 +347,150 @@ footer {
     background-color: var(--color-naranjita);
 }
 
+/* ======================================= */
+/* --- ESTILOS DE DETALLE DE PRODUCTO Y COMENTARIOS --- */
+/* ======================================= */
 
-/* --- RESPONSIVO PARA MÓVILES --- */
+.product-detail-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    text-align: left;
+}
+
+.gallery-section {
+    flex: 1;
+    min-width: 40%;
+    position: sticky; 
+    top: 20px;
+}
+
+.main-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+    flex: 1.5;
+    min-width: 55%;
+}
+
+.info-section h1 {
+    text-align: left;
+    margin-top: 0;
+    color: var(--color-principal);
+    font-size: 2.5em;
+}
+
+.info-section h3 {
+    color: var(--color-naranjita);
+    font-size: 1.5em;
+    margin-top: 20px;
+    border-bottom: 2px solid var(--color-gris);
+    padding-bottom: 5px;
+}
+
+.specs-list {
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+    font-size: 1.1em;
+}
+
+.specs-list strong {
+    color: var(--color-cafecito);
+}
+
+.specs-list li {
+    border-bottom: 1px dotted var(--color-gris);
+    padding: 5px 0;
+}
+
+/* Estilos de tabla para certificaciones */
+.certification-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.certification-table th, .certification-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+.certification-table th {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+/* --- ESTILOS DE COMENTARIOS --- */
+#comments-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    border-top: 2px solid var(--color-gris);
+}
+
+.comment-item {
+    border: 1px solid var(--color-gris);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background-color: var(--color-fondo-claro);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.comment-meta {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed var(--color-gris);
+    padding-bottom: 5px;
+}
+
+.comment-meta strong {
+    color: var(--color-cafecito);
+    font-size: 1.1em;
+}
+
+.comment-form {
+    /* Mantenemos el formulario de comentarios como un bloque */
+    text-align: left;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.comment-form input[type="text"], .comment-form input[type="email"] {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.comment-form input:first-child { 
+    margin-right: 20px; 
+}
+
+
+/* --- RESPONSIVO PARA MÓVILES (TODAS LAS PÁGINAS) --- */
 @media (max-width: 768px) {
+    
+    /* 1. NAVEGACIÓN GENERAL */
     nav {
         flex-direction: column;
         text-align: center;
@@ -385,10 +508,11 @@ footer {
     }
 
     .logo-container {
-        height: 120px; /* Reducimos el tamaño en pantallas pequeñas */
+        height: 80px; /* Reducimos el tamaño para móvil */
         padding-top: 0;
     }
 
+    /* 2. CONTENIDO GENERAL */
     .mvv-container, .service-list {
         flex-direction: column;
         gap: 20px;
@@ -419,5 +543,24 @@ footer {
         display: block;
         margin: 10px auto;
         width: 80%;
+    }
+    
+    /* 3. DETALLE DE PRODUCTO ESPECÍFICO */
+    .product-detail-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .gallery-section {
+        position: static; 
+    }
+    .info-section h1, .info-section h3 {
+        text-align: center;
+    }
+    
+    /* 4. FORMULARIO DE COMENTARIOS EN MÓVIL */
+    .comment-form input[type="text"], .comment-form input[type="email"] {
+        width: 100%;
+        margin-right: 0;
+        display: block;
     }
 }
