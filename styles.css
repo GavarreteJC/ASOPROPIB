@@ -12,25 +12,37 @@
     --color-amarrillo: #E7C800;       /* Amarillo */
 }
 
+/* --- PALETA DE COLORES SIMPLE Y CLARA --- */
 /* --- ESTILOS GENERALES Y TIPOGRAFÍA --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--color-fondo-claro);
-    color: var(--color-cafecito); /* Usamos cafecito para el color de texto del body */
+    color: var(--color-cafecito); 
     line-height: 1.6;
 }
 
 h1, h2, h3 {
-    color: var(--color-principal); /* Verde Oscuro */
+    color: var(--color-principal); 
     text-align: center; 
     margin-bottom: 0.5em;
 }
 
+/* Clases de utilidad */
+.primary-button { background-color: var(--color-principal) !important; }
+.secondary-button { background-color: var(--color-naranjita) !important; }
+.accent-color { color: var(--color-naranjita) !important; }
+.main-color { color: var(--color-principal) !important; }
+.small-text { font-size: 0.9em; }
+.services-bg { background-color: var(--color-gris); padding: 40px 20px; }
+.contact-bg { background-color: var(--color-amarrillo); padding: 50px 20px; }
+.contact-text { color: var(--color-cafecito); font-size: 1.2em; }
+.contact-buttons { margin-top: 30px; }
+
 /* --- NAVEGACIÓN (HEADER) --- */
 header {
-    background-color: var(--color-azul-cielo); /* AZUL CIELO */
+    background-color: var(--color-gris); 
     padding: 15px 0; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
@@ -44,7 +56,31 @@ nav {
     padding: 0 20px;
 }
 
+/* --- AJUSTES PARA EL LOGO DE IMAGEN --- */
+
+/* Esconde el texto antiguo del logo (si aún lo tienes como fallback) */
 .logo {
+    display: none; 
+}
+
+/* Contenedor del logo para control de espacio */
+.logo-container {
+    height: 140px; /* Define la altura que quieres darle al logo */
+    display: flex;
+    align-items: center;
+    padding-top: 5px; /* Pequeño ajuste si es necesario */
+}
+
+/* Estilos de la imagen del logo */
+.logo-img {
+    height: 100%; /* Ocupa el 100% de la altura de su contenedor */
+    width: auto;
+    max-width: 150px; /* Limita el ancho para que no sea muy grande en escritorio */
+    vertical-align: middle;
+}
+
+/* Ajuste si el texto del logo fuera necesario como respaldo */
+.logo-container {
     font-size: 1.8em;
     font-weight: 800; 
     color: var(--color-fondo-claro); 
@@ -52,45 +88,71 @@ nav {
     letter-spacing: 1px; 
 }
 
+
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 25px; 
+    gap: 0; /* Eliminamos el gap para que los elementos se toquen */
 }
 
 nav ul li a {
-    color: var(--color-fondo-claro); 
+    /* Hacemos que el enlace se comporte como un bloque para que ocupe todo el espacio */
+    display: block; 
+    
+    color: var(--color-azul-cielo); 
     text-decoration: none;
-    padding: 8px 15px; 
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 4px; 
-    font-size: 1.05em;
+    
+    /* Aumentamos el padding para darle más 'cuerpo' al área de click y al cuadrado */
+    padding: 25px 30px; 
+    
+    transition: background-color 0.3s, text-decoration 0.3s;
+    border-radius: 0; /* Eliminamos el border-radius para un look más cuadrado */
+    font-size: 1.50em;
+    font-weight: 500;
 }
 
 nav ul li a:hover {
-    background-color: var(--color-naranjita); /* Naranja/Ocre */
-    color: var(--color-cafecito); /* Texto Marrón Cacao al hacer hover */
+    /* Estilo de subrayado para el hover */
+    text-decoration: underline; 
+    text-decoration-thickness: 2px; /* Grosor del subrayado */
+    text-underline-offset: 4px; /* Separación del texto */
+    
+    /* Mantenemos un color de fondo sutil al pasar el cursor */
+    background-color: var(--color-fondo-claro); 
+    
+    /* El color del texto no cambia para mantener la claridad */
+    color: var(--color-azul-cielo); 
 }
-
 
 /* --- SECCIÓN HERO --- */
 .hero {
-    background-color: var(--color-fondo-claro); /* Blanco */
+    /* Asume que tienes una imagen 'img/hero-cacao.jpg' */
+    background-image: url('img/cacacofruta.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     padding: 100px 20px;
     text-align: center;
-    border-bottom: 2px solid var(--color-gris); /* Usamos Gris */
+    border-bottom: 2px solid var(--color-gris);
 }
 .hero p {
-    color: #333; 
+    color: white; 
     font-size: 1.2em;
 }
 
 /* --- BOTONES DE LLAMADA A LA ACCIÓN (CTA) --- */
 .cta-button {
     display: inline-block;
-    background-color: var(--color-naranjita); /* Naranja/Ocre */
+    background-color: var(--color-naranjita); 
     color: var(--color-fondo-claro);
     padding: 15px 30px;
     border: none;
@@ -98,12 +160,18 @@ nav ul li a:hover {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
+    margin-left: 10px; /* Separación entre botones */
+    margin-top: 17px;
+}
+.cta-button:first-of-type {
+    margin-left: 0;
 }
 .cta-button:hover {
-    background-color: var(--color-principal); /* Hover a Verde Oscuro */
+    opacity: 0.9;
 }
 
-/* --- Misión, Visión, Valores (MVV) - DISEÑO LINEAL Y SIMPLE --- */
+
+/* --- Misión, Visión, Valores (MVV) --- */
 .mvv-container {
     display: flex;
     max-width: 1200px;
@@ -124,11 +192,11 @@ nav ul li a:hover {
 }
 
 .mvv-item h3 {
-    color: var(--color-naranjita); /* Naranja/Ocre para títulos de MVV */
+    color: var(--color-naranjita); 
     font-size: 1.3em;
 }
 
-/* --- SECCIONES DE CONTENIDO --- */
+/* --- SECCIONES DE CONTENIDO GENERAL --- */
 .content-section {
     max-width: 1000px;
     margin: 40px auto;
@@ -136,7 +204,72 @@ nav ul li a:hover {
     text-align: center;
 }
 
-/* --- CORRECCIÓN PARA LA SECCIÓN DE DESTACADOS/NOTICIAS --- */
+/* --- PRODUCTOS --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.product-card {
+    background-color: var(--color-fondo-claro);
+    border: 1px solid var(--color-gris);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    display: block;
+    border-bottom: 2px solid var(--color-verdecito);
+}
+
+.product-card h3 {
+    margin-top: 15px;
+    color: var(--color-principal);
+}
+
+.product-card p {
+    padding: 0 15px 15px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* --- SERVICIOS --- */
+.service-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.service-item {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-left: 5px solid var(--color-verdecito);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.service-item h3 {
+    text-align: left;
+    margin-top: 0;
+}
+
+/* --- NOTICIAS --- */
 .news-container {
     display: flex;
     gap: 20px;
@@ -161,9 +294,65 @@ nav ul li a:hover {
 
 /* --- FOOTER --- */
 footer {
-    background-color: var(--color-cafecito); /* Marrón Cacao */
+    background-color: var(--color-cafecito); 
     color: var(--color-fondo-claro);
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
+}
+
+/* --- RESPONSIVO PARA MÓVILES --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 15px;
+        width: 100%;
+    }
+    
+    nav ul li a {
+        padding: 12px 15px;
+        text-align: center;
+    }
+
+    .logo-container {
+        height: 120px; /* Reducimos el tamaño en pantallas pequeñas */
+        padding-top: 0;
+    }
+
+    .mvv-container, .service-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mvv-item {
+        border-left: none;
+        border-top: 1px solid var(--color-gris);
+    }
+
+    .mvv-item:first-child {
+        border-top: none;
+    }
+
+    .news-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .news-card {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    .contact-buttons .cta-button {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
 }

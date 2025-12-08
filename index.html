@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASOPROPIB - Inicio</title>
-    <link rel="stylesheet" href="styles.css"> </head>
+    <title>ASOPROPIB - Sabores de Pico Bonito</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
 <body>
 
     <header>
         <nav>
-            <a href="index.html" class="logo">ASOPROPIB</a> 
+            <a href="index.html" class="logo-container">
+                <img src="img/logo.jpeg" alt="Logo ASOPROPIB" class="logo-img">
+            </a>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <h1>Sabores Auténticos de Pico Bonito</h1>
-        <p>Asociación de Productores de Cacao y Rambutan, con compromiso ambiental y social.</p>
-        <a href="productos.html" class="cta-button">Ver Productos</a> </section>
+        <p>Asociación de Productores de Cacao y Rambutan,  con compromiso ambiental y social.</p>
+        <a href="#productos" class="cta-button">Ver Productos</a> 
+    </section>
 
     <main>
+        
         <section class="mvv-container">
             <div class="mvv-item">
                 <h3>Misión</h3> <p>Ser líderes en la producción sostenible de cacao y rambutan, mejorando la vida de nuestros miembros y protegiendo la biodiversidad en Pico Bonito.</p>
@@ -39,35 +44,81 @@
             </div>
         </section>
         
-        <section class="content-section">
-            <h2>Nuestra Promesa</h2> <p>Trabajamos cada día para ofrecer productos que no solo deleitan el paladar, sino que cuentan una historia de esfuerzo y respeto por la tierra hondureña. Conozca lo que hacemos y cómo podemos trabajar juntos.</p>
+        <section id="productos" class="content-section">
+            <h2>Nuestros Productos de Origen Natural</h2>
+            <p>Descubre el sabor único que nace de la tierra virgen de Pico Bonito.</p>
             
-            <div style="margin-top: 40px;">
-                <a href="servicios.html" class="cta-button" style="background-color: var(--color-principal);">Asesoría técinica</a> <a href="contacto.html" class="cta-button" style="margin-left: 20px;">Únete a la Asociación</a> </div>
-        </section>
-        
-        <section class="content-section" style="background-color: var(--color-gris); padding: 40px 20px;">
-            <h2>Últimas Noticias</h2>
-            
-            <div class="news-container">
-                
-                <div class="news-card">
-                    <h3 style="color: var(--color-naranjita);">Cosecha 2024</h3>
-                    <p style="font-size: 0.9em;">Resultados récord en la producción de cacao orgánico.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="img/Cacacoseco.jpeg" alt="Grano de Cacao Orgánico">
+                    <h3>Cacao Criollo Orgánico</h3>
+                    <p>Grano fermentado y seco, ideal para chocolate de alta calidad. Cosecha limitada.</p>
                 </div>
                 
-                <div class="news-card">
-                    <h3 style="color: var(--color-naranjita);">Nuevo Taller</h3>
-                    <p style="font-size: 0.9em;">Capacitación sobre técnicas avanzadas de fermentación.</p>
+                <div class="product-card">
+                    <img src="img/Lichas.jpeg" alt="Rambutan Fresco">
+                    <h3>Rambután Fresco</h3>
+                    <p>Fruta exótica y jugosa, cultivada bajo sombra para asegurar su dulzura y tamaño.</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="img/frutaexotica.jpeg" alt="Mangustino">
+                    <h3>Mangustino</h3>
+                    <p>La esencia pura del cacao. Ideal para repostería, bebidas tradicionales y uso industrial.</p>
                 </div>
             </div>
+            <a href="#contacto" class="cta-button primary-button">Solicitar Cotización</a>
+        </section>
+        
+        <section id="servicios" class="content-section services-bg">
+            <h2>Servicios y Productores </h2>
+            <p>Compartimos nuestro conocimiento para impulsar el crecimiento sostenible de la región.</p>
             
-            <a href="#" class="cta-button" style="background-color: var(--color-principal); margin-top: 20px;">Ver Todos los Eventos</a> </section>
+            <div class="service-list">
+                <article class="service-item">
+                    <h3 class="accent-color">Asesoría Técnica en Cultivo</h3>
+                    <p>Capacitación en técnicas de poda, manejo de plagas orgánico y optimización de cosecha.</p>
+                </article>
+                <article class="service-item">
+                    <h3 class="accent-color">Fermentación y Secado</h3>
+                    <p>Servicios de procesamiento post-cosecha para garantizar la calidad del grano de exportación.</p>
+                </article>
+                <article class="service-item">
+                    <h3 class="accent-color">Comercialización Conjunta</h3>
+                    <p>Acceso a mercados nacionales e internacionales a través del volumen de la asociación.</p>
+                </article>
+            </div>
+            <a href="#contacto" class="cta-button secondary-button">Conocer más sobre Nuestros Servicios</a>
+        </section>
+        
+        <section class="content-section">
+            <h2>Noticias de la Asociación </h2>
+            <div class="news-container">
+                <div class="news-card">
+                    <h3 class="accent-color">Cosecha 2024</h3>
+                    <p class="small-text">Resultados récord en la producción de cacao orgánico.</p>
+                </div>
+                <div class="news-card">
+                    <h3 class="accent-color">Nuevo Taller</h3>
+                    <p class="small-text">Capacitación sobre técnicas avanzadas de fermentación.</p>
+                </div>
+            </div>
+            <a href="#" class="cta-button primary-button">Ver Todos los Eventos</a> 
+        </section>
+        
+        <section id="contacto" class="content-section contact-bg">
+            <h2 class="main-color">Contáctanos</h2>
+            <p class="contact-text">¿Interesado en nuestros productos o quieres unirte a nuestra misión? Escríbenos.</p>
+            <div class="contact-buttons">
+                <a href="mailto:info@asoprotib.com" class="cta-button secondary-button">Enviar Correo</a> 
+                
+            </div>
+        </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2025 ASOPROPIB. Todos los derechos reservados.</p>
+        <p>&copy; 2025 ASOPROPIB. Todos los derechos reservados. | Contacto: info@asoprotib.com</p>
     </footer>
 
 </body>
