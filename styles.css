@@ -129,7 +129,7 @@ nav ul li a:hover {
 
 /* --- SECCIÓN HERO --- */
 .hero {
-    /* Asume que tienes una imagen 'img/hero-cacao.jpg' */
+    /* fondo imagen de cacao enorme */
     background-image: url('img/cacacofruta.jpeg');
     background-size: cover;
     background-position: center;
@@ -300,6 +300,71 @@ footer {
     padding: 20px 0;
     margin-top: 40px;
 }
+
+/* --- ESTILOS ESPECÍFICOS DEL FORMULARIO DE CONTACTO --- */
+
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--color-fondo-claro);
+    border: 1px solid var(--color-gris);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color-principal); /* Utiliza el verde oscuro para las etiquetas */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-naranjita); /* Resalta el foco con el color naranja */
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    width: 100%;
+    /* Reutilizamos el estilo del botón principal */
+    background-color: var(--color-principal);
+    color: var(--color-fondo-claro);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: var(--color-naranjita);
+}
+
 
 /* --- RESPONSIVO PARA MÓVILES --- */
 @media (max-width: 768px) {
