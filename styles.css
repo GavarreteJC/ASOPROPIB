@@ -43,7 +43,7 @@ h1, h2, h3 {
 .contact-text { color: var(--color-cafecito); font-size: 1.2em; }
 .contact-buttons { margin-top: 30px; }
 
-/* --- NAVEGACIÓN (HEADER) --- */
+/* --- NAVEGACIÓN --- */
 header {
     background-color: var(--color-gris); 
     padding: 15px 0; 
@@ -66,7 +66,7 @@ nav {
 }
 
 .logo-container {
-    height: 100px; /* Altura ajustada para el escritorio */
+    height: 100px;
     display: flex;
     align-items: center;
     padding-top: 5px; 
@@ -99,7 +99,7 @@ nav ul li a {
     padding: 25px 30px; 
     transition: background-color 0.3s, text-decoration 0.3s;
     border-radius: 0; 
-    font-size: 1.1em; /* Ajustado para que quepan */
+    font-size: 1.1em;
     font-weight: 500;
 }
 
@@ -154,7 +154,7 @@ nav ul li a:hover {
 }
 
 
-/* --- Misión, Visión, Valores (MVV) --- */
+/* --- Misión, Visión, Valores  --- */
 .mvv-container {
     display: flex;
     max-width: 1200px;
@@ -284,7 +284,7 @@ footer {
     margin-top: 40px;
 }
 
-/* --- ESTILOS ESPECÍFICOS DEL FORMULARIO DE CONTACTO (GENERAL) --- */
+/* --- ESTILOS ESPECÍFICOS DEL FORMULARIO DE CONTACTO  --- */
 
 .form-container {
     max-width: 600px;
@@ -347,9 +347,9 @@ footer {
     background-color: var(--color-naranjita);
 }
 
-/* ======================================= */
+
 /* --- ESTILOS DE DETALLE DE PRODUCTO Y COMENTARIOS --- */
-/* ======================================= */
+
 
 .product-detail-container {
     max-width: 1200px;
@@ -508,7 +508,7 @@ footer {
     }
 
     .logo-container {
-        height: 80px; /* Reducimos el tamaño para móvil */
+        height: 80px;
         padding-top: 0;
     }
 
